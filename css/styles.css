@@ -1,0 +1,93 @@
+/* Global */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Tags */
+body {
+    font-family: rubik, sans-serif;
+    color: rgb(73, 73, 73);
+    background: rgb(245, 244, 236) url(../img/440.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+h1 {
+    position: relative;
+    left: 0;
+    padding-left: 150px;
+}
+button {
+    background: deeppink;
+    padding: 20px;
+    color: white;
+    border:2px solid white;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+/* Ids */
+#botiquin {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 2em;
+}
+#botiquin button {
+    cursor: pointer;
+}
+#message:empty {
+    padding: 0;
+}
+#message {
+    grid-column: 1/-1;
+    grid-row: 3/-1;
+
+    background: rgba(255, 216, 230, 0.6);
+    padding: 30px;
+}
+#agregar {
+    background: darkmagenta;
+}
+#consultar {
+    background: goldenrod;
+}
+#quitar {
+    background: darkslateblue;
+}
+
+/* Clases */
+.cruz {
+    position: absolute;
+    left: 0;
+}
+.cruz:before,
+.cruz:after {
+    content: '';
+    width: 100px;
+    height: 50px;
+    background: red;
+    display: block;
+    position: absolute;
+}
+.cruz:before {
+    transform: rotate(90deg);
+}
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 0.5fr 5fr 0.5fr;
+    grid-template-rows: repeat(3,minmax(100px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 2em;
+}
+.header {
+    grid-column: 2/3;
+}
